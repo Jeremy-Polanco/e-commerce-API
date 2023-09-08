@@ -4,7 +4,9 @@ require("express-async-errors");
 const express = require("express");
 const app = express();
 
-const morgan = require("morgan");
+const { stMonitor } = require("sematext-agent-express");
+stMonitor.start();
+
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const rateLimiter = require("express-rate-limit");
